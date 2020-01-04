@@ -1,6 +1,6 @@
 # NLP Auhorship Detection
 
-**Problem overview** 
+**Problem** 
 
 Having texts from two song writers, detect the authorship of a new sample. 
 
@@ -11,8 +11,12 @@ Having texts from two song writers, detect the authorship of a new sample.
 * clean the documents from apostrophes that are misleading the tokenizer
 * tokenize into words
 * lemmatize the words to consider different forms of the same word as one; using pymorphy2 morphological analyser for Ukrainian language as all the texts here are in Ukrainian
-2. Extract features
+2. Extract features 
+* build a vocabulary from all the texts we have
+* use bag-of-words technique to store the cout of words (present in vocabulary) computed with the Term-Frequency Inverse Document-frequency (TF-I-DF). TF-I-DF helps to avoid over-weighting the topic-specific words or some frequently-used parts of speech by assuming that a less-frequent word is more important to the text than a typical one.
+
 3. Train and evaluate several cassifiers to determint a better model for this task.
+4. Writeup on the outcomes :arrow_down:
 
 
 **Writeup**
