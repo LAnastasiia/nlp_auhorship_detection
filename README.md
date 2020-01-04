@@ -2,15 +2,15 @@
 
 **Problem** 
 
-Having texts from two song writers, detect the authorship of a new sample. 
+Having texts from two song writers, detect the authorship of a new sample.
 
 
 **Approach**
 
 1. Preprocess the samples 
-* clean the documents from apostrophes that are misleading the tokenizer
+* clean the documents from apostrophes which were misleading the tokenizer
 * tokenize into words
-* lemmatize the words to consider different forms of the same word as one; using pymorphy2 morphological analyser for Ukrainian language as all the texts here are in Ukrainian
+* lemmatize the words to consider different forms of the same word as one; use pymorphy2 morphological analyser github.com/kmike/pymorphy2/issues/80 that works with Ukrainian language, as our data is all in Ukrainian
 2. Extract features 
 * build a vocabulary from all the texts we have
 * use bag-of-words technique to store the cout of words (present in vocabulary) computed with the Term-Frequency Inverse Document-frequency (TF-I-DF). TF-I-DF helps to avoid over-weighting the topic-specific words or some frequently-used parts of speech by assuming that a less-frequent word is more important to the text than a typical one.
