@@ -25,8 +25,8 @@ Whichever feature extraction technique we are using, the input for NLP model is 
 
 The first model that comes to mind that could deal with the problems above is Support Verctor Machine (SVM). It still works good in high-dimentional space because it doesn't use all the saples (vectors in the space) for the hyperplane - but only the support vectors which help to separate the classes.
 
-And, as you can see with the AUC scores, the SVC (SVM model implementation with linear kernel by default) is performing better than other models. 
+And, as you can see with the AUC scores, the sklearn.svm.SVC (SVM model implementation with linear kernel by default) is performing better than other models. 
 
 Another theoretically good algorithm choice could be the Random Forest model, but it didn't quite confirmed with only 0.78 AUC score on average.  
 
-I aslo tried some other models to check if some would surprisingly work better on our specific dataset, but SVM still kept it's championship :)  
+I aslo tried some other models to check if some would surprisingly turn out to work better on our specific dataset, but SVM still kept it's championship :)  
